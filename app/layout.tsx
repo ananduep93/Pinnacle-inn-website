@@ -39,7 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${playfair.variable} ${inter.variable} bg-background`}>
       <body className="font-sans antialiased">
-        {children}
+        <div className="relative flex flex-col min-h-screen overflow-x-hidden">
+          {children}
+        </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
