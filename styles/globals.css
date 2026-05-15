@@ -135,28 +135,34 @@
 
   /* Responsive Typography */
   h1 {
-    @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl;
+    @apply text-3xl sm:text-4xl md:text-7xl lg:text-8xl;
   }
   h2 {
-    @apply text-3xl sm:text-4xl md:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-5xl;
   }
 
   /* Compact spacing for mobile */
   section {
-    @apply py-16 sm:py-24 md:py-32;
+    @apply py-12 sm:py-24 md:py-32 overflow-hidden;
   }
 }
 
 /* Explicit Media Queries for Mobile Fine-tuning */
 @media (max-width: 640px) {
   :root {
-    --radius: 0.5rem; /* Slightly tighter corners on mobile */
+    --radius: 0.5rem;
   }
 
-  /* Compact padding for cards and containers */
+  /* Strict width for mobile to prevent clipping */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   .container, .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
   }
 
   /* Adjust Hero height for mobile browsers */

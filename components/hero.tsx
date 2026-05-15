@@ -44,7 +44,7 @@ export function Hero() {
             Welcome to
           </motion.p>
           
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-6 leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-6 leading-tight break-words">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
