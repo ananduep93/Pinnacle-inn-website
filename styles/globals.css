@@ -120,6 +120,33 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Responsive Typography */
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl;
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  /* Smooth Scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Compact spacing for mobile */
+  section {
+    @apply py-16 sm:py-24 md:py-32;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-background/80 backdrop-blur-md;
   }
 }

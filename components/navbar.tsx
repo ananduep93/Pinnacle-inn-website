@@ -93,9 +93,12 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg ${
-                isScrolled ? 'text-foreground' : 'text-white'
+              className={`lg:hidden p-2.5 rounded-full transition-all active:scale-95 ${
+                isScrolled 
+                  ? 'text-foreground bg-secondary/50' 
+                  : 'text-white bg-white/10 backdrop-blur-sm'
               }`}
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

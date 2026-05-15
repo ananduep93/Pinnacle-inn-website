@@ -10,6 +10,7 @@ import { Location } from '@/components/location'
 import { BookingCTA } from '@/components/booking-cta'
 import { FAQ } from '@/components/faq'
 import { Footer } from '@/components/footer'
+import { MobileActionTabs } from '@/components/mobile-action-tabs'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <BookingCTA />
       <FAQ />
       <Footer />
+      <MobileActionTabs />
       <WhatsAppButton />
     </main>
   )
